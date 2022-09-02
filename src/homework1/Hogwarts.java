@@ -8,17 +8,12 @@ public class Hogwarts {
     private String witchcraft;
     private String transgress;
 
-    public Hogwarts(String name, String faculty, String witchcraft, String transgress, String bravery, String s, String transgress1) {
+
+    public Hogwarts(String name, String faculty, String witchcraft, String transgress) {
         this.name = name;
         this.faculty = faculty;
         this.witchcraft = witchcraft;
         this.transgress = transgress;
-    }
-
-    public Hogwarts(String name, String faculty, String cunning, String determination, String ambition, String resourcefulness, String thirstForPower, String witchcraft, String transgress) {
-    }
-
-    public Hogwarts(String name, String faculty, String mind, String wisdomy, String wit, String creativity, String witchcraft, String transgress) {
     }
 
     public String getName() {
@@ -68,7 +63,7 @@ public class Hogwarts {
 
     @Override
     public String toString() {
-        return "Hogwarts{" +
+        return "c{" +
                 "name='" + name + '\'' +
                 ", faculty='" + faculty + '\'' +
                 ", witchcraft='" + witchcraft + '\'' +
