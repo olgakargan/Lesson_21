@@ -1,63 +1,57 @@
 package homework1;
 
-public class Ravenclaw extends Hogwarts{
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Objects;
+
+@Data
+
+public class Ravenclaw extends Hogwarts {
+
+    private int mind;
+    private int wisdomy;
+    private int wit;
+    private int creativity;
 
 
+    public void compareStudents(Ravenclaw studentSecond) {
+        int powerOne = this.mind + this.wisdomy + this.wit + this.creativity;
+        int powerTwo = studentSecond.mind + studentSecond.wisdomy + studentSecond.wit + studentSecond.creativity;
+        if (powerOne > powerTwo) {
+            System.out.println(this.getName() + " stronger than " + studentSecond.getName());
+        } else if (powerTwo > powerOne) {
+            System.out.println(studentSecond.getName() + " stronger than " + this.getName());
+        } else {
+            System.out.println(studentSecond.getName() + " the same strength " + this.getName());
 
-    private String mind;
-    private String wisdomy;
-    private String wit;
-    private String creativity;
+        }
 
+    }
 
-    public Ravenclaw(String name, String faculty, String mind, String wisdomy, String wit, String creativity, String witchcraft) {
-        super(wisdomy, wit, creativity, witchcraft);
+    public Ravenclaw(String name, int witchcraft, int transgress, int mind, int wisdomy, int wit,
+                     int creativity) {
+        this.setName(name);
+        this.setWitchcraft(witchcraft);
+        this.setTransgress(transgress);
         this.mind = mind;
         this.wisdomy = wisdomy;
         this.wit = wit;
         this.creativity = creativity;
 
-    }
-
-    public String getMind() {
-        return mind;
-    }
-
-    public void setMind(String mind) {
-        this.mind = mind;
-    }
-
-    public String getWisdomy() {
-        return wisdomy;
-    }
-
-    public void setWisdomy(String wisdomy) {
-        this.wisdomy = wisdomy;
-    }
-
-    public String getWit() {
-        return wit;
-    }
-
-    public void setWit(String wit) {
-        this.wit = wit;
-    }
-
-    public String getCreativity() {
-        return creativity;
-    }
-
-    public void setCreativity(String creativity) {
-        this.creativity = creativity;
     }
 
     @Override
     public String toString() {
-        return "Ravenclaw{" +
-                "mind='" + mind + '\'' +
-                ", wisdomy='" + wisdomy + '\'' +
-                ", wit='" + wit + '\'' +
-                ", creativity='" + creativity + '\'' +
-                '}';
+        return "I " + getName() +
+                ", faculty='" + "Ravenclaw" +
+                ", mind=" + mind +
+                ", wisdomy=" + wisdomy +
+                ", wit=" + wit +
+                ", creativity=" + creativity +
+                ", witchcraft=" + getWitchcraft() +
+                ", transgress=" + getTransgress();
     }
 }
+

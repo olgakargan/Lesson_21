@@ -1,62 +1,45 @@
-import homework1.Gryffindor;
-import homework1.Hufflepuff;
-import homework1.Ravenclaw;
-import homework1.Slytherin;
+import homework1.*;
 
 public class Main {
-    static Gryffindor[] gryffindor = new Gryffindor[3];
-    static Slytherin[] slytherin = new Slytherin[3];
-    static Hufflepuff[] hufflepuff = new Hufflepuff[3];
 
-    static Ravenclaw[] ravenclaw = new Ravenclaw[3];
 
     public static void main(String[] args) {
 
-        gryffindor[0] = new Gryffindor("Harry Potter", "Slytherin", "11", "6", "8", "12", "6");
-        gryffindor[1] = new Gryffindor("Hermione Granger", "Slytherin", "13", "7", "9", "11", "5");
-        gryffindor[2] = new Gryffindor("Ron Weasley", "Slytherin", "14", "8", "10", "10", "4");
+        Gryffindor HarryPotter = new Gryffindor("Harry Potter", 41, 26, 28, 45, 56);
+        Gryffindor HermioneGranger = new Gryffindor("Hermione Granger", 43, 27, 29, 11, 25);
+        Gryffindor RonWeasley = new Gryffindor("Ron Weasley", 14, 8, 10, 20, 4);
 
 
-        slytherin[0] = new Slytherin("Draco Malfoy", "Slytherin", "11", "6", "8", "12", "6");
-        slytherin[1] = new Slytherin("Graham Montague", "Slytherin", "13", "7", "9", "11", "5");
-        slytherin[2] = new Slytherin("Gregory Goyle", "Slytherin", "14", "8", "10", "10", "4");
+        Slytherin DracoMalfoy = new Slytherin("Draco Malfoy", 11, 6, 8, 12, 13, 14, 56);
+        Slytherin GrahamMontague = new Slytherin("Graham Montague", 13, 7, 9, 11, 15, 22, 26);
+        Slytherin GregoryGoyle = new Slytherin("Gregory Goyle", 14, 8, 10, 10, 14, 12, 16);
 
 
-        hufflepuff[0] = new Hufflepuff("Zachariah Smith", "Slytherin", "15", "8", "3", "6", "8");
-        hufflepuff[1] = new Hufflepuff("Cedric Diggory", "Slytherin", "13", "5", "8", "4", "7");
-        hufflepuff[2] = new Hufflepuff("Justin Finch-Fletchley", "Slytherin", "10", "4", "7", "1", "6");
+        Hufflepuff ZachariahSmith = new Hufflepuff("Zachariah Smith", 15, 48, 3, 6, 18);
+        Hufflepuff CedricDiggory = new Hufflepuff("Cedric Diggory", 13, 35, 8, 4, 7);
+        Hufflepuff JustinFinchFletchley = new Hufflepuff("Justin Finch-Fletchley", 10, 4, 7, 21, 16);
 
+        Ravenclaw ZhouChang = new Ravenclaw("Zhou Chang", 11, 16, 18, 12, 36, 24);
+        Ravenclaw PadmaPatil = new Ravenclaw("Padma Patil", 13, 17, 29, 11, 5, 14);
+        Ravenclaw MarcusBelby = new Ravenclaw("Marcus Belby", 14, 88, 10, 10, 14, 24);
 
-        ravenclaw[0] = new Ravenclaw("Zhou Chang", "ravenclaw", "11", "6", "8", "12", "6");
-        ravenclaw[1] = new Ravenclaw("Padma Patil", "ravenclaw", "13", "7", "9", "11", "5");
-        ravenclaw[2] = new Ravenclaw("Marcus Belby", "ravenclaw", "14", "8", "10", "10", "4");
+        System.out.println(HarryPotter);
+        System.out.println(GrahamMontague);
+        System.out.println(ZachariahSmith);
+        System.out.println(PadmaPatil);
 
-        printAllGryffindor();
-        printAllSlytherin();
-        printAllHufflepuff();
-        printAllRavenclaw();
+        HarryPotter.compareStudents(RonWeasley);
+        Hogwarts.compareStudents(HarryPotter, DracoMalfoy);
 
+        DracoMalfoy.compareStudents(GrahamMontague);
+        Hogwarts.compareStudents(DracoMalfoy , ZachariahSmith);
 
-    }
+        ZachariahSmith.compareStudents(JustinFinchFletchley);
+        Hogwarts.compareStudents(ZachariahSmith , MarcusBelby);
 
-    public static void printAllGryffindor() {
-        for (Gryffindor gryffindor : gryffindor) {
-            System.out.println(gryffindor);
-        }
-    }
-    public static void printAllHufflepuff() {
-        for (Hufflepuff hufflepuff : hufflepuff) {
-            System.out.println(hufflepuff);
-        }
-    }
-    public static void printAllSlytherin() {
-        for (Slytherin slytherin : slytherin) {
-            System.out.println(slytherin);
-        }
-    }
-    public static void printAllRavenclaw() {
-        for (Ravenclaw ravenclaw : ravenclaw) {
-            System.out.println(ravenclaw);
-        }
+        PadmaPatil.compareStudents(MarcusBelby);
+        Hogwarts.compareStudents(PadmaPatil, GregoryGoyle);
+
     }
 }
+
