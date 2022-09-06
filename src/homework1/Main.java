@@ -1,3 +1,5 @@
+package homework1;
+
 import homework1.*;
 
 public class Main {
