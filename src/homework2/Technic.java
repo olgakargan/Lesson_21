@@ -1,42 +1,40 @@
 package homework2;
 
+import lombok.Data;
+
 import java.util.Objects;
 
+@Data
 public abstract class Technic {
-    public static String modelName;
-    public int wheelsCount;
+    private String modelName;
+    private int wheelsCount;
+
+    public Technic(String modelName, int wheelsCount) {
+
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
+
+    public abstract void updateTure();
+
+    public abstract void ServiceStation();
+
+    public abstract void tehnicService();
+
 
     public String getModelName() {
         return modelName;
-    }
-
-    public int getWheelsCount() {
-        return wheelsCount;
     }
 
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+    public int getWheelsCount() {
+        return wheelsCount;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Technic)) return false;
-        Technic technic = (Technic) o;
-        return getWheelsCount() == technic.getWheelsCount() && Objects.equals(getModelName(), technic.getModelName());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getModelName(), getWheelsCount());
-    }
-
-    public Technic() {
-        this.modelName = modelName;
+    void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
 
@@ -48,4 +46,6 @@ public abstract class Technic {
                 '}';
     }
 
+
+    public abstract void TehnicService();
 }

@@ -1,14 +1,41 @@
 package homework2;
 
-import lombok.Data;
-
-@Data
 public class Car extends Technic {
-    public Car() {
-        super();
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
 
+    public Car (String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
+    @Override
+    public void updateTure() {
 
     }
+
+    @Override
+    public void ServiceStation() {
+
+    }
+
+    @Override
+    public void tehnicService() {
+
+    }
+
+    @Override
+    public void TehnicService() {
+
+    }
+
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку авто");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель авто");
+    }
+
 }
+
+
+
