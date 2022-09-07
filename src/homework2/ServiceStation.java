@@ -1,53 +1,35 @@
 package homework2;
 
-public interface ServiceStation {
+import lombok.Data;
 
+@Data
+public class ServiceStation extends Technic  {
+    private int ServiceStation;
+    private String wheelsCount;
 
-    void check(homework2.Car car, Object o, Object o1);
-
-    void check(Car car, Object o, Object o1);
-
-    class bicycle implements ServiceStation {
-
-
-        @Override
-        public void check(homework2.Car car, Object o, Object o1) {
-
-        }
-
-        @Override
-        public void check(ServiceStation.Car car, Object o, Object o1) {
-
-        }
-
-        public class Car implements ServiceStation {
-            static String modelName;
-
-            @Override
-            public void check(homework2.Car car, Object o, Object o1) {
+    public ServiceStation (String modelName, int wheelsCountint, int ServiceStation) {
+        super();
+        this.setModelName(modelName);
+        this.setwheelsCountint(wheelsCountint);
+        this.ServiceStation(ServiceStation);
 
             }
 
-            @Override
-            public void check(Car car, Object o, Object o1) {
-
-            }
-
-
-            public abstract class Truck implements ServiceStation {
-                static String modelName;
-
-
-            }
-        }
+    @Override
+    public String toString() {
+        return "ServiceStation{" +
+                "ServiceStation=" + ServiceStation +
+                ", wheelsCount=" + wheelsCount +
+                '}';
     }
 
-    public class Truck {
-        public static String modelName;
+    @Override
+    protected void checkEngine() {
+
     }
 
-    public class Car {
-        public static String modelName;
+    @Override
+    protected void ServiceStation(int serviceStation) {
+
     }
 }
-

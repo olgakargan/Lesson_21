@@ -1,14 +1,35 @@
 package homework2;
 
-import lombok.Data;
+public abstract class Car extends Technic {
+    private int updateTyre;
+    private int checkEngine;
 
-@Data
-public class Car extends Technic {
-    public Car() {
+    public Car(String modelName, int wheelsCountint, int updateTyre, int checkEngine) {
         super();
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
-
+        this.setModelName(modelName);
+        this.setwheelsCountint(wheelsCountint);
+        this.updateTyre();
+        this.checkEngine();
 
     }
+
+    public Car() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "updateTyre=" + updateTyre +
+                ", checkEngine=" + checkEngine +
+                ", modelName='" + getModelName() + '\'' +
+                '}';
+    }
+
+    @Override
+    protected void checkEngine() {
+
+    }
+
+
 }
