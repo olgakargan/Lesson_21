@@ -1,10 +1,5 @@
 package homework2;
 
-import lombok.Data;
-
-import java.util.Objects;
-
-@Data
 public abstract class Technic {
     private String modelName;
     private int wheelsCount;
@@ -37,15 +32,4 @@ public abstract class Technic {
     void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
-
-    @Override
-    public String toString() {
-        return "Technic{" +
-                "modelName='" + modelName + '\'' +
-                ", wheelsCount=" + wheelsCount +
-                '}';
-    }
-
-
-    public abstract void TehnicService();
 }

@@ -1,6 +1,5 @@
 package homework2;
 
-
     public class Bicycle extends Technic {
         public Bicycle (String modelName, int wheelsCount) {
             super(modelName, wheelsCount);
@@ -23,11 +22,6 @@ package homework2;
 
         @Override
         public void tehnicService() {
-
-        }
-
-        @Override
-        public void TehnicService() {
 
         }
     }

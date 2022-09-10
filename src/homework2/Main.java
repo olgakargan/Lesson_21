@@ -1,8 +1,5 @@
 package homework2;
 
-import lombok.Data;
-
-
 public class Main {
     public static void main(String[] args) {
 
